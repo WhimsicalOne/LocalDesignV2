@@ -3,3 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+// Navigation Section
+.navigation {
+    height: 70px;
+    background: none;
+    position: fixed;
+    width: 100%;
+    padding: 5px 100px;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .logo-container {
+
+        // will find use later..
+        img {
+            max-width: 20%;
+            display: block;
+            height: auto;
+        }
+    }
+
+    .navigation-container {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+
+        .nav-links {
+            list-style: none;
+            margin-left: 15px;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
