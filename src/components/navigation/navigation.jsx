@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo2.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignInAlt, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 // Will add svg later...
 const Navigation = () => {
     return (
@@ -22,6 +24,16 @@ const Navigation = () => {
                     <Link to="/services">Services</Link>
                 </li>
             </ul>
+            <div className="login-container">
+                <Link className="btn login-btn">
+                    <FontAwesomeIcon className="icon" icon={faSignInAlt} />
+                    Login
+                </Link>
+                <Link className="btn signup-btn">
+                    <FontAwesomeIcon className="icon" icon={faUserPlus} /> Sign
+                    up
+                </Link>
+            </div>
         </nav>
     );
 };

@@ -4,10 +4,61 @@
     box-sizing: border-box;
 }
 
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+$body: 'Ubuntu',
+sans-serif;
+$head: 'Montserrat',
+sans-serif;
+
+// Colors
+$color1:#1fb6ea;
+$color2:#3644AF;
+$color3:#2A3443;
+$neutral1: #000000;
+$neutral2: #ffffff;
+
+//Helper Classes
+.btn {
+    width: 115px;
+    height: 35px;
+    border-radius: 4px;
+    background: $color1;
+    color: $neutral2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: .2s all ease-in-out;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    .icon {
+        margin-right: 5px;
+    }
+}
+
+.header1 {
+    font-size: 60px;
+    font-family: $head;
+    font-weight: 700;
+    color: white;
+}
+
+.body-text {
+    font-size: 16px;
+    font-family: $body;
+    font-weight: 300;
+}
+
 // Navigation Section
 .navigation {
     height: 70px;
-    background: none;
+    background: $color3;
     position: fixed;
     width: 100%;
     padding: 5px 100px;
@@ -17,21 +68,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: 0px 6px 10px rgba($color: #000, $alpha: 0.25);
 
     .logo-container {
+        width: 8%;
+        margin-right: 10px;
 
-        // will find use later..
         img {
-            max-width: 20%;
+            max-width: 100%;
             display: block;
             height: auto;
+            filter: invert(100%);
         }
     }
 
     .navigation-container {
-        margin-left: auto;
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         .nav-links {
             list-style: none;
@@ -39,8 +93,35 @@
 
             a {
                 text-decoration: none;
-                color: black;
+                color: $neutral2;
             }
         }
+    }
+
+    .login-container {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+
+        .btn.login-btn {
+            margin-right: 10px;
+            background: $color2;
+        }
+    }
+}
+
+// Hero Section...
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(52deg, rgba(163, 163, 163, 0.09) 0%, rgba(163, 163, 163, 0.09) 33.3%, rgba(100, 100, 100, 0.09) 33.3%, rgba(100, 100, 100, 0.09) 66.6%, rgba(162, 162, 162, 0.09) 66.6%, rgba(162, 162, 162, 0.09) 99%), linear-gradient(258deg, rgba(193, 193, 193, 0.06) 0%, rgba(193, 193, 193, 0.06) 33.3%, rgba(169, 169, 169, 0.06) 33.3%, rgba(169, 169, 169, 0.06) 66.6%, rgba(92, 92, 92, 0.06) 66.6%, rgba(92, 92, 92, 0.06) 99%), linear-gradient(129deg, rgba(45, 45, 45, 0.03) 0%, rgba(45, 45, 45, 0.03) 33.3%, rgba(223, 223, 223, 0.03) 33.3%, rgba(223, 223, 223, 0.03) 66.6%, rgba(173, 173, 173, 0.03) 66.6%, rgba(173, 173, 173, 0.03) 99%), linear-gradient(280deg, rgba(226, 226, 226, 0.06) 0%, rgba(226, 226, 226, 0.06) 33.3%, rgba(81, 81, 81, 0.06) 33.3%, rgba(81, 81, 81, 0.06) 66.6%, rgba(186, 186, 186, 0.06) 66.6%, rgba(186, 186, 186, 0.06) 99%), linear-gradient(85deg, rgba(225, 225, 225, 0.04) 0%, rgba(225, 225, 225, 0.04) 33.3%, rgba(95, 95, 95, 0.04) 33.3%, rgba(95, 95, 95, 0.04) 66.6%, rgba(39, 39, 39, 0.04) 66.6%, rgba(39, 39, 39, 0.04) 99%), linear-gradient(128deg, rgba(184, 184, 184, 0.06) 0%, rgba(184, 184, 184, 0.06) 33.3%, rgba(0, 0, 0, 0.06) 33.3%, rgba(0, 0, 0, 0.06) 66.6%, rgba(140, 140, 140, 0.06) 66.6%, rgba(140, 140, 140, 0.06) 99.89999999999999%), linear-gradient(323deg, rgba(40, 40, 40, 0.07) 0%, rgba(40, 40, 40, 0.07) 33.3%, rgba(214, 214, 214, 0.07) 33.3%, rgba(214, 214, 214, 0.07) 66.6%, rgba(190, 190, 190, 0.07) 66.6%, rgba(190, 190, 190, 0.07) 99.89999999999999%), linear-gradient(61deg, rgba(230, 230, 230, 0) 0%, rgba(230, 230, 230, 0) 33.3%, rgba(241, 241, 241, 0) 33.3%, rgba(241, 241, 241, 0) 66.6%, rgba(55, 55, 55, 0) 66.6%, rgba(55, 55, 55, 0) 99%), linear-gradient(0deg, #2625e3, #0bbaef) !important;
+    margin-bottom: 50px;
+    box-shadow: 0px 8px 13px rgba($color: #000, $alpha: 0.3);
+
+    .hero {
+        text-align: center;
     }
 }
